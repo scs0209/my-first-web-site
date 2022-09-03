@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css 파일을 가져오는 태그-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 웹문서 제목 -->
+  <title>Momentum app</title>
+</head>
+<body>
+  <h2 id="clock">00:00:00</h2>
+  <!-- div를 form으로 바꾸어 주었다. -->
+  <!-- CSS의 hidden 클래스때문에 조건을 설정하지 않는다면 숨겨져있다. -->
+  <form class="hidden" id="login-form">
+    <input required maxlength="15" type="text" placeholder="What is your name?">
+    <input type="submit" value="Log In">
+  </form>
+  <h1 id="greeting" class="hidden"></h1>
+  <form id="todo-form">
+    <input type="text" placeholder="Write a To Do and Press Enter" required />
+    <!-- required를 쓰지 않으면 enter를 누를때 todoList가 생성됨 -->
+  </form>
+  <ul id="todo-list"></ul>
+  <div id="quote">
+    <span></span>
+    <span></span>
+  </div>
+  <div id="weather">
+    <span></span>
+    <span></span>
+  </div>
+  <!-- javascript를 가져오는 태그 -->
+  <script src="js/greetings.js"> </script>
+  <script src="js/clock.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/weather.js"></script>
+</body>
+</html>
