@@ -1,0 +1,17 @@
+.hidden {
+  display: none;
+   /* 디스플레이스를 숨기는 코드  */
+}
+
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  opacity: 80%;
+} 
+/* 사진을 배경화면으로 만드는 코드 */

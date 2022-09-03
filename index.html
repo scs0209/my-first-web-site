@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>WEB-1 html</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css 파일을 가져오는 태그-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 웹문서 제목 -->
+  <title>Momentum app</title>
 </head>
-
 <body>
-<h1><a href="index.html">WEB</a></h1>
- <div id="grid">
-  <ol>
-    <li><a href="1.html">html</a></li>
-    <li><a href="2.html">css</a></li>
-    <li><a href="3.html">JavaScript</a></li>
-  </ol>
-<div id="article">
-  <input type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if (this.value === 'night'){
-      target.style.backgroundColor='black';
-      target.style.color='white';
-      this.value = 'day';
-    }else{
-      target.style.backgroundColor='white';
-      target.style.color='black';
-      this.value = 'night';
-  }
-  ">
-<h2>WEB</h2>
-
-  <p>웹의 다른 뜻은 다음과 같다.
-<br>웹(web)은 기본적으로 거미줄을 뜻한다.
-<br>월드 와이드 웹(World Wide Web)의 약자
-<br>월드와이드웹: 세계 최초의 웹 브라우저
-<br>웹 2.0, 웹 3.0
-<br>웹사이트(website)
-<br>웹(WEB)은 도널드 커누스가 제안한 프로그래밍 시스템이다.
-<br>웹(Web)은 그놈 데스크톱의 웹 브라우저이다.
-<br>월간 웹은 1998년 창간된 월간지이다.</p>
-</div>
-</div>
-  </body>
+  <h2 id="clock">00:00:00</h2>
+  <!-- div를 form으로 바꾸어 주었다. -->
+  <!-- CSS의 hidden 클래스때문에 조건을 설정하지 않는다면 숨겨져있다. -->
+  <form class="hidden" id="login-form">
+    <input required maxlength="15" type="text" placeholder="What is your name?">
+    <input type="submit" value="Log In">
+  </form>
+  <h1 id="greeting" class="hidden"></h1>
+  <form id="todo-form">
+    <input type="text" placeholder="Write a To Do and Press Enter" required />
+    <!-- required를 쓰지 않으면 enter를 누를때 todoList가 생성됨 -->
+  </form>
+  <ul id="todo-list"></ul>
+  <div id="quote">
+    <span></span>
+    <span></span>
+  </div>
+  <div id="weather">
+    <span></span>
+    <span></span>
+  </div>
+  <!-- javascript를 가져오는 태그 -->
+  <script src="js/greetings.js"> </script>
+  <script src="js/clock.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/weather.js"></script>
+</body>
+</html>
